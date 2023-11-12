@@ -17,8 +17,6 @@ body{
 
 
 /* header */
-
-
 .logo{
     width:9vh;
     height:9vh;
@@ -42,8 +40,6 @@ header{
 ul{
     list-style-type: none;
 }
-
-
 
 nav .nav-links{
     display:flex;
@@ -69,23 +65,16 @@ nav .nav-link a{
     border-radius:10px;
 }
 
-
 nav .nav-link:hover a{
     background-color: rgba(255, 255, 255, 0.6);
    
     color:black;
 }
 
-
 .home-logo{
     font-size:2rem;
     margin:0rem 1.5rem;
 }
-
-
-
-
-
 
 .hamburger{
     position:absolute;
@@ -103,8 +92,6 @@ nav .nav-link:hover a{
     border-radius: 5px;
 
 }
-
-
 
 @media (max-width: 800px) {
     .hamburger{
@@ -143,4 +130,18 @@ nav .nav-link:hover a{
     nav .nav-link a{
         border-radius: 0;
     }
+}
+
+
+/* Footer styling */
+footer{
+    position:fixed;
+    bottom:0;
+    background-color: rgba(0,0,0,0.8);
+    width:100%;
+    color:white;
+    padding:8px 20px;
+}
+footer a{
+    color:rgba(255,255,255,0.7);
 }
