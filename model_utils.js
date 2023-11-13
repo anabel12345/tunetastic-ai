@@ -1,7 +1,7 @@
   
    
     async function createModel() {
-        const checkpointURL = URL + "./model/model.json"; // model topology
+        const checkpointURL = "./model/model.json"; // model topology
         const metadataURL = "https://github.com/anabel12345/tunetastic-ai/model/metadata.json"; // model metadata
 
         const recognizer = speechCommands.create(
