@@ -8,7 +8,6 @@ async function createModel() {
     return recognizer;
 }
 
-// Rest of your code...
 
 
 async function init(render) {
@@ -19,23 +18,15 @@ async function init(render) {
 
 
 
-   recognizer.listen(result => {
-        const scores = result.scores; // probability of prediction for each class
-        console.log(scores)
-        let maxScoreIndex;
-        for(let i=0; i<scores.length; i++){
-            if(scores[i]>scores[maxScoreIndex]){
-                maxScoreIndex=i;
-            }
-        }
-        render(classLabels[maxScoreIndex]); //send the prediction to be rendered
+    recognizer.listen(result => {
+       console.log(result)
     }, {
         includeSpectrogram: true,
         probabilityThreshold: 0.75,
         invokeCallbackOnNoiseAndUnknown: true,
-        overlapFactor: 0.50 // probably want between 0.5 and 0.75. More info in README
-  
-      });
+        overlapFactor: 0.50
+    });
+    
 
 
     }
