@@ -1,10 +1,8 @@
   
-    // the link to your model provided by Teachable Machine export panel
-    const URL = "https://teachablemachine.withgoogle.com/models/IyE2vxLgE/";
-
+   
     async function createModel() {
-        const checkpointURL = URL + "model.json"; // model topology
-        const metadataURL = URL + "metadata.json"; // model metadata
+        const checkpointURL = URL + "./model/model.json"; // model topology
+        const metadataURL = "https://github.com/anabel12345/tunetastic-ai/model/metadata.json"; // model metadata
 
         const recognizer = speechCommands.create(
             "BROWSER_FFT", // fourier transform type, not useful to change
